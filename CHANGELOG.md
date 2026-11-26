@@ -1,5 +1,25 @@
 # svelte-eslint-parser
 
+## 1.13.0
+
+### Minor Changes
+
+- [#1084](https://github.com/sveltejs/svelte-eslint-parser/pull/1084) [`42323df`](https://github.com/sveltejs/svelte-eslint-parser/commit/42323dfa2f1d47a6fe0ccc9dd89422aacc278d11) Thanks [@baseballyama](https://github.com/baseballyama)! - Type the setter of a function binding on an HTML or special element (such as `<input bind:value={() => text, (v) => (text = v)}>`) with the getter's return type instead of implicit `any`.
+
+### Patch Changes
+
+- [#1032](https://github.com/sveltejs/svelte-eslint-parser/pull/1032) [`a6aa72b`](https://github.com/sveltejs/svelte-eslint-parser/commit/a6aa72bcf92e96b301851a579bb5899813e09716) Thanks [@nikolas-sapa](https://github.com/nikolas-sapa)! - fix: ignore `<!--` and `-->` between top-level rules in `<style>`, as CSS does
+
+- [#1089](https://github.com/sveltejs/svelte-eslint-parser/pull/1089) [`9bde6b5`](https://github.com/sveltejs/svelte-eslint-parser/commit/9bde6b5b8899e357a78027da301f0643c8586ed8) Thanks [@baseballyama](https://github.com/baseballyama)! - fix: keep comments around a template expression that Svelte does not attach to it, such as `/* a */` in `{/* a */ (value)}` and `/* b */` in `{fn(value) /* b */}`, and parse `{(/* a */ (value)) /* b */}`
+
+- [#1090](https://github.com/sveltejs/svelte-eslint-parser/pull/1090) [`51ea313`](https://github.com/sveltejs/svelte-eslint-parser/commit/51ea31328a6c10a3076a3ac89b453a04a53d99b2) Thanks [@that-richan](https://github.com/that-richan)! - fix: look a component prop up in each member of a props union, so snippet parameters and attributes are typed for unions of large props such as HTML attributes and for props only some members declare
+
+- [#1092](https://github.com/sveltejs/svelte-eslint-parser/pull/1092) [`ea3a0f1`](https://github.com/sveltejs/svelte-eslint-parser/commit/ea3a0f12f107f47ba69f71fcce7367ac94b100ac) Thanks [@baseballyama](https://github.com/baseballyama)! - fix: keep comments in `{@render}` tags, such as `/* a */` in `{@render foo() /* a */}`, as comments
+
+- [#995](https://github.com/sveltejs/svelte-eslint-parser/pull/995) [`88aa3bd`](https://github.com/sveltejs/svelte-eslint-parser/commit/88aa3bd34d68250166e6fe3d928e8ce9ffb96813) Thanks [@baseballyama](https://github.com/baseballyama)! - fix: do not treat exports in Svelte 5 `<script module>` as props
+
+- [#1074](https://github.com/sveltejs/svelte-eslint-parser/pull/1074) [`05db71e`](https://github.com/sveltejs/svelte-eslint-parser/commit/05db71e179f3e3728a5507944339a807e14b6d05) Thanks [@baseballyama](https://github.com/baseballyama)! - fix: parse template expressions that end with a line comment, such as `{value // note` followed by `}` on the next line, and parenthesized expressions with a trailing comment, such as `{(value) /* note */}`
+
 ## 1.12.0
 
 ### Minor Changes
